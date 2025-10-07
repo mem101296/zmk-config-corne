@@ -21,6 +21,18 @@
             tapping-term-ms = <200>;
             bindings = <&kp LG(D)>, <&to 4>;
         };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 4>, <&to 4>;
+        };
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 1>, <&to 2>;
+        };
     };
     
     keymap {
@@ -39,7 +51,7 @@
 &kp ESC        &kp Q  &kp W  &kp F      &kp P    &kp B            &kp J        &kp L     &kp U         &kp Y    &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LEFT_SHIFT    &kp A  &kp R  &kp S      &kp T    &kp G            &kp M        &kp N     &kp E         &kp I    &kp O          &kp LEFT_BRACKET
 &kp LEFT_CONTROL  &kp Z  &kp X  &kp C      &kp D    &kp V            &kp K        &kp H     &kp COMMA     &kp DOT  &kp FSLH       &kp RIGHT_BRACKET
-                                &kp LEFT_META  &lt 4 4  &kp SPACE    &kp KP_ENTER  &lt 1 N2  &td0
+                                &kp LEFT_META  &td1  &kp SPACE    &kp KP_ENTER  &td2  &td0
             >;
         };
 
